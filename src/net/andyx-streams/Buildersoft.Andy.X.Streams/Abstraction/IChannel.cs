@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Buildersoft.Andy.X.Streams.Abstraction
 {
-    public interface IStream<out T>
+    public interface IChannel<out T>
     {
         // TODO... Implement
     }

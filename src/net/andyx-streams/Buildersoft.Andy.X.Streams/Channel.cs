@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Buildersoft.Andy.X.Streams
 {
-    public class Source<T> : /*SourceBuilder<T>,*/ ISource<T>
+    public class Channel<T> : ChannelBuilder, IChannel<T>
     {
         // TODO... Implement
     }
