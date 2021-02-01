@@ -1,4 +1,8 @@
-﻿using Buildersoft.Andy.X.Streams.Abstraction;
+﻿using Buildersoft.Andy.X.Client;
+using Buildersoft.Andy.X.Client.Abstraction;
+using Buildersoft.Andy.X.Client.Configurations;
+using Buildersoft.Andy.X.Client.Events;
+using Buildersoft.Andy.X.Streams.Abstraction;
 using Buildersoft.Andy.X.Streams.Builders;
 using System;
 using System.Collections.Generic;
@@ -8,8 +12,16 @@ using System.Threading.Tasks;
 
 namespace Buildersoft.Andy.X.Streams
 {
-    public class Source<T> : /*SourceBuilder<T>,*/ ISource<T>
+    public class Source<T> : SourceBuilder<T>, ISource<T>
     {
-        // TODO... Implement
+        public Source(AndyXClient andyXClient, Action<ReaderOptions> readerOptions) : base(andyXClient, readerOptions)
+        {
+
+        }
+
+        public Source(IAndyXFactory andyXFactory, Action<ReaderOptions> readerOptions) : base(andyXFactory, readerOptions)
+        {
+
+        }
     }
 }
