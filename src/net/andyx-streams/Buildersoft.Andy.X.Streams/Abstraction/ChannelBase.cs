@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Buildersoft.Andy.X.Streams.Builders
+namespace Buildersoft.Andy.X.Streams.Abstraction
 {
-    public abstract class ChannelBuilder
+    public abstract class ChannelBase
     {
             
     }

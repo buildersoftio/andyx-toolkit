@@ -5,9 +5,9 @@ using Buildersoft.Andy.X.Streams.Configurations;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Buildersoft.Andy.X.Streams.Builders
+namespace Buildersoft.Andy.X.Streams.Abstraction
 {
-    public abstract class SourceBuilder<T>
+    public abstract class SourceBase<T>
     {
         protected readonly ILogger _logger;
         protected readonly AndyXClient _andyXClient;
@@ -15,7 +15,7 @@ namespace Buildersoft.Andy.X.Streams.Builders
 
         protected readonly SourceOptions _sourceOptions;
 
-        public SourceBuilder(AndyXClient andyXClient, Action<ReaderOptions> readerOptionsAction)
+        public SourceBase(AndyXClient andyXClient, Action<ReaderOptions> readerOptionsAction)
         {
             _andyXClient = andyXClient;
 
@@ -25,7 +25,7 @@ namespace Buildersoft.Andy.X.Streams.Builders
             _logger = _andyXClient.GetOptions().Logger.GetLoggerFactory().CreateLogger(typeof(Source<T>));
         }
 
-        public SourceBuilder(IAndyXFactory andyXFactory, Action<ReaderOptions> readerOptionsAction)
+        public SourceBase(IAndyXFactory andyXFactory, Action<ReaderOptions> readerOptionsAction)
         {
             _andyXClient = andyXFactory.CreateClient();
 
