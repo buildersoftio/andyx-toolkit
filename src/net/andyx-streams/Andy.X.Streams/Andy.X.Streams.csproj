@@ -4,7 +4,7 @@
 	  <TargetFrameworks>net6.0;net5;netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
 	  <AssemblyVersion>2.0.0</AssemblyVersion>
 	  <FileVersion>2.0.0</FileVersion>
-	  <Product>Buildersoft Andy X</Product>
+	  <Product>Buildersoft Andy X Toolkit</Product>
 	  <Company>Buildersoft</Company>
 	  <Authors>Buildersoft</Authors>
 	  <Copyright>Copyright © Buildersoft 2021</Copyright>
@@ -13,7 +13,25 @@
   <ItemGroup>
     <PackageReference Include="Buildersoft.Andy.X.Client" Version="2.0.0-rc1" />
   </ItemGroup>
-	
-	
+
+	<ItemGroup>
+		<None Include="..\..\..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="Assets\andyX.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="Assets\license.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Assets\" />
+		<Folder Include="Builders\" />
+	</ItemGroup>
 
 </Project>
