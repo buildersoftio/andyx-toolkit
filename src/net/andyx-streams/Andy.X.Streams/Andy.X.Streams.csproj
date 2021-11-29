@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net6.0;net5;netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
+	  <AssemblyVersion>2.0.0</AssemblyVersion>
+	  <FileVersion>2.0.0</FileVersion>
+	  <Product>Buildersoft Andy X</Product>
+	  <Company>Buildersoft</Company>
+	  <Authors>Buildersoft</Authors>
+	  <Copyright>Copyright © Buildersoft 2021</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Buildersoft.Andy.X.Client" Version="2.0.0-rc1" />
+  </ItemGroup>
+	
+	
+
+</Project>
